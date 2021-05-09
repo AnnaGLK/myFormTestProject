@@ -1,0 +1,76 @@
+body {
+  background-color: #f1f1f1;
+}
+
+.conteiner {
+  background-color: #e7a1a1;
+  color: #000;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 5%;
+  width: 60%;
+  min-width: 300px;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+input .invalid {
+  background-color: #ffdddd;
+}
+
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  text-align: center;
+}
+
+button :hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* steps in footer */
+#foot {
+  text-align: center;
+  margin-top: 40px;
+  background-color: #04AA6D;
+}
+
+#foot .step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #e7a1a1;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+#foot .step .active {
+  opacity: 1;
+}
+
+#foot .step .finish {
+  background-color: #fff;
+}
+/*# sourceMappingURL=myStyle.css.map */

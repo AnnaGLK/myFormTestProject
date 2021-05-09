@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+<body>
+<div class="conteiner" >
+<div class="row">
+
+<!--       get form data           -->
+    <script>
+        function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                    }
+                }
+                return params;
+            }
+            params = getParams();
+            status = unescape(params["status"]);
+            year = unescape(params["year"]);
+            gender = unescape(params["gender"]);
+
+// ---------------------output
+            document.getElementById('display').innerHTML = document.write(status + ", "+ year+ ", "+ gender);
+
+//-------- change color -  not working :(
+            if (gender == 'Male'){
+                
+                document.getElementById('row').style.backgroundColor='green';
+            }else{
+                
+                document.getElementById('row').style.backgroundColor='#ffffff';
+            }
+
+            var userDateinput = unescape(params["year"]), 
+                difference=Date.now() - userDateinput.getTime(), 
+                ageDate = new Date(difference), 
+                calculatedAge=   Math.abs(ageDate.getUTCFullYear() - 1970);
+
+// -----------change bgColor & fontSize  -  not working :((
+
+            if (calculatedAge < 30){
+                $('row').css('color','pink');
+                // row.style.color ='pink';
+            }else if (calculatedAge > 40){
+                row.style.fontSize='x-large';
+            }
+
+    </script>
+  
+</div>
+
+
+<!--     youtube       -->
+<!-- spent on it to much time, it's not working.  -->
+<div class="row">
+  <iframe  max-width="90%" height="315"
+  src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+  </iframe>
+</div>
+</div>
+
+<!--     smiley footer       -->
+<footer id="foot">
+     
+    <script>
+        function getParams(){
+                    var idx = document.URL.indexOf('?');
+                    var params = new Array();
+                    if (idx != -1) {
+                        var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                        for (var i=0; i<pairs.length; i++){
+                            nameVal = pairs[i].split('=');
+                            params[nameVal[0]] = nameVal[1];
+                        }
+                    }
+                    return params;
+                }
+                params = getParams();
+                status = unescape(params["status"]);
+                year = unescape(params["year"]);
+                gender = unescape(params["gender"]);
+    
+    function myFunction() {
+      var str = unescape(params["gender"])+unescape(params["year"])+unescape(params["status"]);
+      var n = str.length;
+
+    }
+    
+    function isPrime(num) {
+    
+    if (num === 2) {
+      return true;
+    } else if (num > 1) {
+      for (var i = 2; i < num; i++) {
+    
+        if (num % i !== 0) {
+          return true;
+        } else if (num === i * i) {
+          return false
+        } else {
+          return false;
+        }
+      }
+    } else {
+      return false;
+    }
+    
+    }
+    
+    
+    if (isPrime(myFunction())){
+        document.write(':)');
+    }
+    
+    else {document.write(':(');}
+    
+    </script>
+   
+  </footer>
+<script src="js/myScript.js"></script>  
+</body>
+</html>
